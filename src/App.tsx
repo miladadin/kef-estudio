@@ -32,13 +32,13 @@ function Home() {
     <main>
       <section className="home-hero">
         <div className="hero-copy">
-          <p className="eyebrow">OBRAS CON IDENTIDAD</p>
+          <p className="eyebrow">ESTUDIO DE ARTE Y OBJETOS</p>
           <h1>Obras<br /><em>con identidad.</em></h1>
           <p className="hero-description">Piezas únicas donde conviven materia, textura, intuición y trabajo artesanal.</p>
           <div className="hero-links"><Link to="/paintings">Explorar obras <ArrowUpRight size={15} /></Link><Link to="/lighting">Ver iluminación <ArrowUpRight size={15} /></Link></div>
         </div>
         <div className="hero-image-wrap">
-          <ImageOrPlaceholder alt="Kef Estudio — studio photograph" className="hero-image" />
+          <ImageOrPlaceholder alt="Kef Estudio — fotografía del estudio" className="hero-image" />
           <span className="image-index">01 / STUDIO</span>
         </div>
         <div className="hero-side-note">BUENOS AIRES<br />DISEÑADO Y HECHO A MANO</div>
@@ -51,12 +51,12 @@ function Home() {
       <section className="home-categories">
         <Link to="/paintings" className="category-feature">
           <div className="category-image"><ImageOrPlaceholder alt="Colección de obras" /></div>
-          <div className="category-meta"><span>01 — PAINTINGS</span><span>Ver colecciones <ArrowUpRight size={14} /></span></div>
+          <div className="category-meta"><span>01 — OBRAS</span><span>Ver colecciones <ArrowUpRight size={14} /></span></div>
           <h2>Obras</h2>
         </Link>
         <Link to="/lighting" className="category-feature category-offset">
           <div className="category-image"><ImageOrPlaceholder alt="Colección de iluminación" /></div>
-          <div className="category-meta"><span>02 — LIGHTING</span><span>Ver modelos <ArrowUpRight size={14} /></span></div>
+          <div className="category-meta"><span>02 — ILUMINACIÓN</span><span>Ver modelos <ArrowUpRight size={14} /></span></div>
           <h2>Iluminación</h2>
         </Link>
       </section>
@@ -100,12 +100,12 @@ function WorkGallery({ work, onClose }: { work: Work; onClose: () => void }) {
 
   return (
     <div className="gallery-overlay" role="dialog" aria-modal="true" aria-label={work.title} onClick={onClose}>
-      <button className="gallery-close" onClick={onClose} aria-label="Close gallery"><X /></button>
+      <button className="gallery-close" onClick={onClose} aria-label="Cerrar galería"><X /></button>
       <div className="gallery-stage" onClick={(event) => event.stopPropagation()}>
         {images.length > 0 ? <img src={images[index]} alt={work.title} /> : <div className="gallery-empty">FOTOGRAFÍAS PRÓXIMAMENTE</div>}
         {images.length > 1 && <>
-          <button className="gallery-arrow previous" onClick={previous} aria-label="Previous image"><ArrowLeft /></button>
-          <button className="gallery-arrow next" onClick={next} aria-label="Next image"><ArrowRight /></button>
+          <button className="gallery-arrow previous" onClick={previous} aria-label="Imagen anterior"><ArrowLeft /></button>
+          <button className="gallery-arrow next" onClick={next} aria-label="Imagen siguiente"><ArrowRight /></button>
         </>}
       </div>
       <div className="gallery-caption"><span>{work.title}</span><span>{images.length ? `${String(index + 1).padStart(2, '0')} / ${String(images.length).padStart(2, '0')}` : 'KEF ESTUDIO'}</span></div>
@@ -133,7 +133,7 @@ function Lighting() {
   return (
     <main className="listing-page">
       <div className="page-heading"><p className="eyebrow">02 / COLECCIÓN</p><h1>Iluminación<span>.</span></h1><p>Piezas hechas a mano para transformar la atmósfera de cada espacio.</p></div>
-      {lightingModels.length ? <div className="collection-grid">{lightingModels.map((model, index) => <Link to={`/lighting/${model.slug}`} className="collection-card" key={model.slug}><div className="collection-cover"><ImageOrPlaceholder src={model.cover} alt={model.title} /><span className="collection-number">0{index + 1}</span></div><div className="collection-card-meta"><h2>{model.title}</h2><span>Ver modelo <ArrowUpRight size={14} /></span></div></Link>)}</div> : <div className="empty-state">Lighting models will be added soon.</div>}
+      {lightingModels.length ? <div className="collection-grid">{lightingModels.map((model, index) => <Link to={`/lighting/${model.slug}`} className="collection-card" key={model.slug}><div className="collection-cover"><ImageOrPlaceholder src={model.cover} alt={model.title} /><span className="collection-number">0{index + 1}</span></div><div className="collection-card-meta"><h2>{model.title}</h2><span>Ver modelo <ArrowUpRight size={14} /></span></div></Link>)}</div> : <div className="empty-state">Los modelos de iluminación se incorporarán próximamente.</div>}
     </main>
   )
 }
