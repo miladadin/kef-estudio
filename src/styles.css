@@ -1,5 +1,5 @@
 :root {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #24231f;
   background: #f7f6f2;
   font-synthesis: none;
@@ -9,7 +9,7 @@
   --ink: #24231f;
   --muted: #89877f;
   --line: #dedcd5;
-  --serif: 'Playfair Display', Georgia, serif;
+  --serif: 'Instrument Serif', Georgia, serif;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
