@@ -34,7 +34,7 @@ function Home() {
         <div className="hero-copy">
           <p className="eyebrow">ESTUDIO DE ARTE Y OBJETOS</p>
           <h1>Obras<br /><em>con identidad.</em></h1>
-          <p className="hero-description">Piezas únicas donde conviven materia, textura, intuición y trabajo artesanal.</p>
+          <p className="hero-description">Piezas únicas, hechas a mano, con intención.</p>
           <div className="hero-links"><Link to="/paintings">Explorar obras <ArrowUpRight size={15} /></Link><Link to="/lighting">Ver iluminación <ArrowUpRight size={15} /></Link></div>
         </div>
         <div className="hero-image-wrap">
