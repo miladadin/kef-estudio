@@ -12,13 +12,13 @@ function Header() {
         <Link className={location.pathname.startsWith('/paintings') ? 'active' : ''} to="/paintings">Paintings</Link>
         <Link className={location.pathname.startsWith('/lighting') ? 'active' : ''} to="/lighting">Lighting</Link>
       </nav>
-      <a className="contact-link" href="mailto:hola@kefestudio.com">Contact <ArrowUpRight size={13} /></a>
+      <a className="contact-link" href="#contact">Contact <ArrowUpRight size={13} /></a>
     </header>
   )
 }
 
 function Footer() {
-  return <footer className="site-footer"><span>KEF ESTUDIO</span><span>Art, objects & handmade light</span><a href="mailto:hola@kefestudio.com">Get in touch <ArrowUpRight size={13} /></a></footer>
+  return <footer id="contact" className="site-footer"><span>KEF ESTUDIO</span><span>Art, objects & handmade light</span><a href="#contact">Get in touch <ArrowUpRight size={13} /></a></footer>
 }
 
 function ImageOrPlaceholder({ src, alt, className = '' }: { src?: string; alt: string; className?: string }) {
