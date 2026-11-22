@@ -30,3 +30,6 @@ Place image files in `public/images/`. Example:
 `public/images/paintings/vendimia/work-name/cover.jpg`
 
 The current catalog entries are structural placeholders. No product photographs have been fabricated or substituted.
+
+## Deployment
+Production deployments are triggered automatically by pushes to `main`.
